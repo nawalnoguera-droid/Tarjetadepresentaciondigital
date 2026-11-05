@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f6f3ee">
+	<title>Nawal Valeria Noguera Davila| Perfil web estudiantil desarrollado como proyecto educativo </title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--paper: #f6f3ee;
+			--card: #fffdfa;
+			--ink: #38352f;
+			--muted: #817a70;
+			--line: #e7e0d7;
+			--accent: #a58d79;
+			--soft: #eee8df;
+		}
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			padding: 48px 20px;
+			background: var(--paper);
+			color: var(--ink);
+			font-family: "DM Sans", sans-serif;
+			font-size: 15px;
+			line-height: 1.7;
+		}
+		.page { width: min(100%, 980px); margin: 0 auto; }
+		.topline {
+			display: flex; justify-content: space-between; align-items: center;
+			margin-bottom: 18px; color: var(--muted); font-size: 11px;
+			letter-spacing: .16em; text-transform: uppercase;
+		}
+		.topline span:last-child { display: flex; align-items: center; gap: 9px; }
+		.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #9caa8b; }
+		.profile-card {
+			overflow: hidden; background: var(--card); border: 1px solid var(--line);
+			box-shadow: 0 18px 55px rgba(69, 57, 43, .06);
+		}
+		.hero {
+			display: grid; grid-template-columns: 1fr 250px; gap: 50px;
+			align-items: center; padding: 56px 66px 50px;
+		}
+		.eyebrow { color: var(--accent); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; }
+		h1, h2, p { margin-top: 0; }
+		h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; }
+		h1 { margin: 11px 0 13px; font-size: clamp(42px, 6vw, 66px); line-height: 1.08; letter-spacing: -.035em; }
+		.subtitle { margin: 0; color: var(--muted); font-size: 16px; }
+		.intro { max-width: 550px; margin: 22px 0 0; color: #625d55; }
+		.portrait-wrap { position: relative; width: 220px; height: 260px; justify-self: end; }
+		.portrait-wrap::after { position: absolute; inset: 12px -12px -12px 12px; z-index: 0; border: 1px solid #d9cdbf; content: ""; }
+		.portrait { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; object-position: center; background: var(--soft); }
+		.details {
+			display: grid; grid-template-columns: repeat(2, 1fr);
+			border-top: 1px solid var(--line);
+		}
+		.detail { padding: 30px 42px 32px; border-bottom: 1px solid var(--line); }
+		.detail:nth-child(odd) { border-right: 1px solid var(--line); }
+		.detail h2 { margin: 0 0 13px; font-size: 22px; }
+		.detail p { margin: 0; color: #6f695f; font-size: 14px; }
+		.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+		.tag { padding: 5px 11px; border: 1px solid var(--line); border-radius: 99px; color: #71695f; font-size: 12px; }
+		.contact {
+			display: flex; justify-content: space-between; align-items: center; gap: 20px;
+			padding: 25px 42px; background: #faf8f4;
+		}
+		.contact p { margin: 0; color: var(--muted); font-size: 13px; }
+		.contact strong { display: block; margin-bottom: 2px; color: var(--ink); font-family: "Playfair Display", Georgia, serif; font-size: 19px; font-weight: 400; }
+		.contact-link {
+			display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px;
+			border: 1px solid #cfc2b4; color: var(--ink); text-decoration: none;
+			font-size: 13px; transition: background .2s, color .2s;
+		}
+		.contact-link:hover, .contact-link:focus-visible { background: var(--ink); color: white; }
+		.footer { padding-top: 18px; color: #958d82; text-align: center; font-size: 11px; letter-spacing: .06em; }
+		@media (max-width: 640px) {
+			body { padding: 24px 14px; }
+			.topline { font-size: 9px; letter-spacing: .11em; }
+			.hero { grid-template-columns: 1fr; gap: 30px; padding: 34px 25px 38px; }
+			.portrait-wrap { grid-row: 1; justify-self: start; width: 145px; height: 170px; }
+			h1 { font-size: 48px; }
+			.intro { margin-top: 17px; }
+			.details { grid-template-columns: 1fr; }
+			.detail { padding: 25px; }
+			.detail:nth-child(odd) { border-right: 0; }
+			.contact { align-items: flex-start; flex-direction: column; padding: 24px 25px; }
+		}
+		@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+	</style>
+</head>
+<body>
+	<main class="page">
+		<div class="topline"><span>Perfil web estudiantil desarrollado como proyecto educativo · 2026</span><span><i class="status-dot" aria-hidden="true"></i> En formación</span></div>
+		<article class="profile-card" aria-label="Tarjeta de presentación académica de Valeria Noguera">
+			<header class="hero">
+				<div>
+					<span class="eyebrow">Creando soluciones con propósito</span>
+					<h1>Nawal Valeria<br>Noguera Davila</h1>
+					<p class="subtitle">Estudiante · Innovadora en formación</p>
+					<p class="intro">Soy una estudiante responsable y comprometida, con una mentalidad enfocada en resolver problemas sobre la tecnologia. Me gusta aprender cosas nuevas, tambien me comprometo  con cada proyecto buscando aprender algo nuevo constantemente y cumplir con las responsabilidades para aplicar lo aprendido y superar mis propias metas. "Mi objetivo es crecer tanto a nivel personal como profesional a lo largo de este camino". </p>
+				</div>
+				<div class="portrait-wrap">
+					<img class="portrait" src="c:\Users\Jose David Noguera D\Desktop\imgperfil.jpg\Valeria Noguera.jpeg" alt="Retrato de perfil de Nawal Valeria Noguera Davila">
+				</div>
+			</header>
+
+			<section class="details" aria-label="Intereses y metas">
+				<div class="detail">
+					<span class="eyebrow">01 · Mi rumbo</span>
+					<h2>Aspiraciones educativas</h2>
+					<p>Al terminar el colegio, me gustaria  continuar mi formacion academica en una institucion de educacion superior o universidad especializados para estudiar la carrera de Gastronomia y Ciencias Culinarias.Me interesa mucho esta profesion porque combina la creatividad.la cultura y la ciencia detras de la preparacion de los alimentos,permitiendo conectar con las personas a traves de la innovacion culinaria. Durante mis estudios,aspiro a desarrollar habilidades tècnicas avanzadas en cocina internacional,pasteleria y gestion de negocios gastronomicos,ademas fortalecer capacidades claves como el liderazgo en la cocina,el trabajo bajo presion y el pensamiento critico. Mi mente esta enfocado en lo pràctico y de alta calidad,que me brinda las herramientas necesarias para destacar en la industria culinaria.  </p>
+				</div>
+				<div class="detail">
+					<span class="eyebrow">02 · Lo que exploro</span>
+					<h2>Intereses tecnológicos</h2>
+					<p>Me interesa aprender sobre la inteligencia artificial, diseño web e diseño grafico,para poder explorar de manera responsable y creativa parea usar la tecnología.</p>
+					<div class="tags"><span class="tag">Diseño web</span><span class="tag">Diseño grafico</span><span class="tag">Inteligencia artificial</span></div>
+				</div>
+				<div class="detail">
+					<span class="eyebrow">03 · Mi enfoque</span>
+					<h2>Áreas de estudio</h2>
+					<p>Me atraen profundamente la gastronomía y las ciencias culinarias, ya que considero que son áreas fundamentales que combinan a la perfección el conocimiento técnico, la creatividad y el trabajo colaborativo. Mi interés se centra en explorar la riqueza cultural de los alimentos, las técnicas de preparación y la innovación dentro de la cocina. A través de este campo de estudio, aspiro a potenciar tanto mis habilidades prácticas con los ingredientes como mi capacidad para trabajar en equipos dinámicos dentro de un entorno profesional. Mi objetivo es dominar este arte para crear experiencias gastronómicas únicas que respondan con creatividad y excelencia a las exigencias del sector actual.
+</p>
+				</div>
+				<div class="detail">
+					<span class="eyebrow">04 · Fuera del aula</span>
+					<h2>Otros intereses</h2>
+					<p>Disfruto pintar, escuchar música, tomar fotografías y compartir tiempo con mi familia. También me gusta hacer deporte y participar en actividades colaborativas.</p>
+				</div>
+			</section>
+
+			<footer class="contact">
+				<div><strong>nawal.noguera@iegimnasiodelcalima.edu.co</strong><p>Estoy abierta a conversar sobre ideas y proyectos académicos.</p></div>
+				<a class="contact-link" href="mailto:nawal.noguera@iegimnasiodelcalima.edu.co" aria-label="Enviar correo a Nawal Valeria Noguera Davila">Escríbeme <span aria-hidden="true">↗</span></a>
+			</footer>
+		</article>
+		<div class="footer">Gracias por visitar mi espacio · Nawal Valeria Noguera Davila</div>
+	</main>
+	<script>
+		// Mejora la accesibilidad del enlace de contacto al enfocarlo desde teclado.
+		document.querySelector('.contact-link').addEventListener('keydown', (event) => {
+			if (event.key === 'Enter') event.currentTarget.click();
+		});
+	</script>
+</body>
+</html>
+
